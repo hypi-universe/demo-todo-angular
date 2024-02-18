@@ -1,0 +1,22 @@
+<div class="container">
+    <form >
+    <h1>Welcome</h1>
+    <br>
+    <!-- Email input -->
+    <label for="">Username</label>
+    <input type="username" name="UsernameId" [(ngModel)]="signInObj.username" required="">
+    <label for="">Password</label>
+    <input type="password" name="Password" [(ngModel)]="signInObj.password" required="">
+    <label for="">Confirm password</label>
+    <input type="password" name="Password" [(ngModel)]="newPassword" required="">
+    <div class="alert alert-danger error" role="alert" *ngIf="mismatch">
+      Error: Password does'nt match
+    </div>
+      
+        <!-- Submit button -->
+        <input type="submit" (click)="Register()" [value]="register">
+      
+   
+      </form>    
+</div>
+

@@ -1,0 +1,15 @@
+<div class="container">
+    <form action="">
+      <div class="header">
+        <h1>Login</h1>
+      </div>
+      <label for="">Username</label>
+      <input type="email" name="EmailId" [(ngModel)]="loginObj.username" required="">
+      <label for="">Password</label>
+      <input type="password" name="Password" [(ngModel)]="loginObj.password" required="">
+      <a href="#">I forgot my password</a>
+      <input type="submit" (click)="onLogin()" [value]="authenticate">
+    </form>
+  </div>
+  
+  

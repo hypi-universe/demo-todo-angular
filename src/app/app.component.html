@@ -1,0 +1,15 @@
+<section class="todoapp" *ngIf="authenticated">
+  <app-todo-header />
+  <div class="container">
+  </div>
+  <app-todo-list />
+  <app-todo-footer />
+</section>
+<app-login *ngIf="!authenticated && !unregistered"></app-login>
+<app-register *ngIf="!authenticated && unregistered"></app-register>
+<div class="footer" *ngIf="!authenticated && !unregistered">
+  <a>Not a member yet? <strong (click)="onRegister()">Sign up</strong></a>
+</div>
+<div class="footer" *ngIf="!authenticated && unregistered">
+  <a>Already have an account? <strong (click)="onLogin()">Login</strong></a>
+</div>
